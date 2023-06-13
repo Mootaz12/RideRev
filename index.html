@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script type="module" src="/main.js" defer></script>
+    <title>RideRev</title>
+  </head>
+  <body>
+    <div id="app" class="font-roboto">
+      <header class="laptop:w-full bg-darkBlue text-white py-3">
+        <nav class="flex laptop:justify-around justify-evenly items-center">
+          <p class="logo font-poppins text-2xl">
+            <a href="#home"><span class="text-lightblue">Ride</span>Rev</a>
+          </p>
+          <ul class="laptop:flex laptop:justify-evenly gap-5 hidden">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#vehicules">Our Vehicules</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+          <div class="buttons flex text-black gap-4">
+            <div
+              id="userState"
+              class="logger-btns flex flex-col laptop:flex-row divide-y-2 laptop:divide-y-0 laptop:divide-x-2 divide-darkGrey rounded-md px-2 bg-grey font-medium"
+            ></div>
+            <select
+              class="lan-btn px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              name="lang"
+              id="lang"
+            >
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+            </select>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section id="home" class="hero pl-24 py-16 relative">
+          <h1 class="text-black font-poppins text-7xl max-w-[800px] mb-7">
+            Unleash the Explorer Within
+          </h1>
+          <p class="text-white/80 max-w-[300px] text-sm mb-10">
+            Embrace the freedom of the open road, with every turn revealing new
+            adventures.
+          </p>
+          <button
+            type="button"
+            class="CTA-btn p-4 text-black bg-limeGreen rounded-md font-medium mb-52 hover:shadow-md"
+          >
+            reserve now !
+          </button>
+          <div class="absolute left-[650px] laptop:block hidden">
+            <button
+              type="button"
+              class="active-carousel-btn carousel-btn"
+              data-carousel="1"
+            ></button>
+            <button
+              type="button"
+              class="carousel-btn"
+              data-carousel="2"
+            ></button>
+            <button
+              type="button"
+              class="carousel-btn"
+              data-carousel="3"
+            ></button>
+          </div>
+        </section>
+        <section id="Vehicules"></section>
+        <section id="about" class="p-10">
+          <h2
+            class="text-darkBlue font-poppins font-semibold tracking-wide text-3xl"
+          >
+            About RideRev
+          </h2>
+          <p class="max-w-[600px] text-black/80 leading-7 my-10 mx-20">
+            At RideRev, we are dedicated to providing convenient and reliable
+            mobility solutions. With a focus on seamless experiences, we
+            streamline the process from booking to pick-up and return. Our
+            partnership with reputable rental companies ensures safety and
+            reliability, backed by comprehensive insurances and coverages. We
+            prioritize transparency, excellent customer service, and value your
+            feedback. Join our community of satisfied customers and discover the
+            convenience and flexibility of RideRev. Start your journey with us
+            today!
+          </p>
+        </section>
+        <section id="Contact" class="bg-lightblue rounded-3xl p-10">
+          <h2
+            class="text-darkBlue font-poppins font-semibold tracking-wide text-3xl"
+          >
+            Contact
+          </h2>
+          <div class="laptop:flex-row gap-20 flex flex-col ml-20 mt-20">
+            <form action="POST" class="flex flex-col gap-5">
+              <label for="name">name</label>
+              <input type="text" name="name" placeholder="name" />
+              <label for="surname">surmane</label>
+              <input type="text" name="surmane" placeholder="surname" />
+              <label for="email">email</label>
+              <input type="email" name="email" placeholder="xyz@gmail.com" />
+              <button
+                type="submit"
+                class="self-end px-5 py-3 bg-grey rounded-md -xl text-center"
+              >
+                Submit
+              </button>
+            </form>
+            <p class="max-w-[400px] text-black/80 leading-7">
+              Our customer support team is available to assist you anytime. If
+              you have any inquiries, feedback, or require assistance with our
+              services, please don't hesitate to reach out. We value your input
+              and strive to provide prompt and helpful support to ensure your
+              satisfaction.
+            </p>
+          </div>
+        </section>
+      </main>
+      <footer
+        id="footer"
+        class="text-center py-4 bg-darkBlue text-white text-xs tracking-wider"
+      ></footer>
+    </div>
+  </body>
+</html>
