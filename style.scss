@@ -5,6 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
+//global
+html {
+  scroll-behavior: smooth;
+}
+
 /* nav-style */
 nav li {
   @apply hover:text-lightblue/80;

@@ -12,24 +12,28 @@
   </head>
   <body>
     <div id="app" class="font-roboto">
-      <header class="laptop:w-full bg-darkBlue text-white py-3">
+      <header class="w-full bg-darkBlue text-white py-3">
         <nav class="flex laptop:justify-around justify-evenly items-center">
           <p class="logo font-poppins text-2xl">
             <a href="#home"><span class="text-lightblue">Ride</span>Rev</a>
           </p>
           <ul class="laptop:flex laptop:justify-evenly gap-5 hidden">
             <li class="active"><a href="#home">Home</a></li>
-            <li><a href="#vehicules">Our Vehicules</a></li>
+            <li>
+              <a href=".src//pages/vehiculesPage.html" id="vehicules"
+                >Our Vehicules</a
+              >
+            </li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About</a></li>
           </ul>
           <div class="buttons flex text-black gap-4">
             <div
               id="userState"
-              class="logger-btns flex flex-col laptop:flex-row divide-y-2 laptop:divide-y-0 laptop:divide-x-2 divide-darkGrey rounded-md px-2 bg-grey font-medium"
+              class="logger-btns flex flex-row divide-x-2 divide-darkGrey rounded-md px-2 bg-grey font-medium"
             ></div>
             <select
-              class="lan-btn px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              class="lan-btn hidden laptop:block px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               name="lang"
               id="lang"
             >
@@ -41,7 +45,7 @@
       </header>
       <main>
         <section id="home" class="hero pl-24 py-16 relative">
-          <h1 class="text-black font-poppins text-7xl max-w-[800px] mb-7">
+          <h1 class="text-black font-poppins text-7xl max-w-[800px] mb-7 mt-10">
             Unleash the Explorer Within
           </h1>
           <p class="text-white/80 max-w-[300px] text-sm mb-10">
@@ -91,7 +95,7 @@
             today!
           </p>
         </section>
-        <section id="Contact" class="bg-lightblue rounded-3xl p-10">
+        <section id="contact" class="bg-lightblue rounded-3xl p-10">
           <h2
             class="text-darkBlue font-poppins font-semibold tracking-wide text-3xl"
           >
@@ -100,11 +104,21 @@
           <div class="laptop:flex-row gap-20 flex flex-col ml-20 mt-20">
             <form action="POST" class="flex flex-col gap-5">
               <label for="name">name</label>
-              <input type="text" name="name" placeholder="name" />
+              <input type="text" name="name" placeholder="name" required />
               <label for="surname">surmane</label>
-              <input type="text" name="surmane" placeholder="surname" />
+              <input
+                type="text"
+                name="surmane"
+                placeholder="surname"
+                required
+              />
               <label for="email">email</label>
-              <input type="email" name="email" placeholder="xyz@gmail.com" />
+              <input
+                type="email"
+                name="email"
+                placeholder="xyz@gmail.com"
+                required
+              />
               <button
                 type="submit"
                 class="self-end px-5 py-3 bg-grey rounded-md -xl text-center"

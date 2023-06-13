@@ -35,11 +35,28 @@ itemsList.forEach((item) => {
 const userLoggedInState = () => {
   if (userLoggedIn) {
     userState.innerHTML =
-      "<button type='button'> <i class='fa-solid fa-user fa-xl' style='color: #000000;'></i></button>";
-    userState.classList.add("flex", "place-items-center");
+      "<button type='button' id='profile'> <i class='fa-solid fa-user fa-xl' style='color: #000000;'></i></button>";
+    userState.classList.add("grid", "place-items-center");
+    //navigation to user profile page
+    const profileBtn = document.getElementById("profile");
+    profileBtn.addEventListener("click", () => {
+      console.log("gg");
+      window.location.href = "./pages/userProfile.html";
+    });
   } else {
     userState.innerHTML =
-      "<button class='p-2'>sign in</button><button class='p-2'>sign up</button>";
+      "<button id='signIn' class='py-2 px-4'>sign in</button><button id='signUp' class='py-2 px-4'>sign up</button>";
+    //navigation to sign-up/in pages
+    const signInBtn = document.getElementById("signIn");
+    const signUpBtn = document.getElementById("signUp");
+    signUpBtn.addEventListener("click", () => {
+      console.log("gg");
+      window.location.href = "./src/pages/sign-up.html";
+    });
+    signInBtn.addEventListener("click", () => {
+      window.location.href = "./src/pages/sign-in.html";
+      console.log("gg");
+    });
   }
 };
 userLoggedInState();
