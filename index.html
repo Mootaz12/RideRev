@@ -76,7 +76,65 @@
             ></button>
           </div>
         </section>
-        <section id="Vehicules"></section>
+        <section id="vehicules" class="p-20">
+          <div class="p-20 flex flex-col laptop:flex-row relative items-end">
+            <div
+              class="text-container flex flex-col items-center order-last border-2 border-black py-6 gap-6 w-4/6"
+            >
+              <h3 class="font-bold text-darkBlue text-2xl font-poppins">
+                Why Us?
+              </h3>
+              <p class="max-w-[600px] text-black/80 leading-7 mx-20">
+                Choose Us for Convenient Scooter Allocation. At RideRev, we
+                pride ourselves on providing a hassle-free experience for
+                scooter allocation With just three simple steps, you can be on
+                your way to exploring the city on two wheels.
+              </p>
+              <button
+                type="button"
+                class="bg-lightblue text-darkBlue rounded-md text-lg font-medium px-4 py-2"
+              >
+                Know more
+              </button>
+            </div>
+            <img
+              src="./images/whyUs-img.png"
+              alt="bike image"
+              class="laptop:w-[600px] aspect-[16/9] z-10 laptop:absolute laptop:bottom-5 laptop:-left-5"
+            />
+            <div class="w-2/6 laptop:block hidden"></div>
+          </div>
+          <div
+            id="product-container"
+            class="mx-10 flex flex-col laptop:flex-row border border-black px-10 py-6 snap-x snap-proximity"
+          >
+            <!-- change it to be dynamic -->
+            <div class="product snap-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+              laborum.
+            </div>
+            <div class="product snap-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+              laborum.
+            </div>
+            <div class="product snap-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+              laborum.
+            </div>
+            <div class="product snap-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+              laborum.
+            </div>
+            <div class="product snap-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+              laborum.
+            </div>
+            <div class="product snap-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+              laborum.
+            </div>
+          </div>
+        </section>
         <section id="about" class="p-10">
           <h2
             class="text-darkBlue font-poppins font-semibold tracking-wide text-3xl"
@@ -95,7 +153,7 @@
             today!
           </p>
         </section>
-        <section id="contact" class="bg-lightblue rounded-3xl p-10">
+        <section id="contact" class="p-10 bg-lightblue rounded-3xl relative">
           <h2
             class="text-darkBlue font-poppins font-semibold tracking-wide text-3xl"
           >
@@ -105,10 +163,10 @@
             <form action="POST" class="flex flex-col gap-5">
               <label for="name">name</label>
               <input type="text" name="name" placeholder="name" required />
-              <label for="surname">surmane</label>
+              <label for="surname">surname</label>
               <input
                 type="text"
-                name="surmane"
+                name="surname"
                 placeholder="surname"
                 required
               />
@@ -121,7 +179,7 @@
               />
               <button
                 type="submit"
-                class="self-end px-5 py-3 bg-grey rounded-md -xl text-center"
+                class="self-end px-5 py-3 bg-grey rounded-md -xl text-center text-black"
               >
                 Submit
               </button>

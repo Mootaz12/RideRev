@@ -8,6 +8,7 @@ const footer = document.getElementById("footer");
 const carouselBtns = document.querySelectorAll(".carousel-btn");
 const hero = document.querySelector(".hero");
 const userState = document.getElementById("userState");
+const productContainer = document.getElementById("product-container");
 let userLoggedIn = false;
 //functions
 // state functions
@@ -78,7 +79,12 @@ carouselBtns.forEach((carouselBtn) => {
     }
   });
 });
-
+// Initialize ScrollSnap
+const scrollSnapContainer = new ScrollSnap(productContainer, {
+  snapDestinationX: "100%",
+  snapIntervalX: "100%",
+});
+scrollSnapContainer.bind();
 //footer
 footer.textContent = `Copyright © ${new Date().getFullYear()} RideRiv. All rights reserved.`;
 //exports

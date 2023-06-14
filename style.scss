@@ -50,3 +50,15 @@ form > label {
 form > input {
   @apply rounded-md px-5 py-3;
 }
+//contact section
+// #contact::before {
+//   content: "";
+//   background-image: url(./images/top-curve.svg);
+//   @apply bg-no-repeat top-0 -z-10 absolute bg-cover w-full h-[%50] aspect-[900/600];
+// }
+// #contact::after {
+//   content: "";
+//   background-image: url(./images/bottom-curve.svg);
+//   @apply bg-no-repeat bottom-[30%] -z-10 absolute bg-cover w-full h-[%50] aspect-[900/600];
+//   // rotate: -180deg;
+// }

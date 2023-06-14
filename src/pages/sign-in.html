@@ -5,23 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="sign-in.js" defer></script>
-    <title>Document</title>
+    <title>RideRev</title>
   </head>
-  <body class="grid place-items-center">
-    <div class="container">
-      <h2 class="text-black font-bold bg-black">Sign in</h2>
-      <form action="POST">
-        <label for="email">name</label>
-        <input type="email" placeholder="xyz@gmail.com" required />
-        <label for="password">password</label>
-        <div class="relative">
-          <input type="password" placeholder="Password" required />
-          <p>SHOW</p>
+  <body class="grid place-items-center h-[100vh]">
+    <div class="flex flex-col gap-7 font-roboto p-6 rounded-md shadow-lg">
+      <h2 class="font-bold text-2xl font-poppins tracking-wide">Sign in</h2>
+      <form action="POST" id="form" class="flex flex-col gap-2">
+        <label for="email" class="hidden">name</label>
+        <input
+          name="email"
+          id="email-phone-input"
+          type="text"
+          class="p-4 outline-0 border-1 border-gray-400 rounded-sm text-zinc-700 font-medium text-lg"
+          placeholder="Phone or Email"
+          required
+        />
+        <label for="password" class="hidden">password</label>
+        <div class="relative bg-red-900">
+          <input
+            name="password"
+            id="pass-input"
+            type="password"
+            class="p-4 outline-0 border-1 border-gray-400 rounded-sm w-full text-zinc-700 font-medium text-lg"
+            placeholder="Password"
+            required
+          />
+          <button
+            type="button"
+            id="show-pass-btn"
+            class="text-sm text-blue-900 absolute top-[50%] translate-y-[-50%] left-[70%] hover:scale-110 transition-all duration-200 ease-in-out"
+          >
+            show
+          </button>
         </div>
-        <p>Forgot password?</p>
-        <button type="submit" class="bg-black">Sign in</button>
+        <a class="text-blue-900">Forgot password?</a>
+        <button
+          type="submit"
+          class="text-white bg-darkBlue rounded-full p-2 font-medium tracking-wide"
+        >
+          Sign in
+        </button>
       </form>
-      <p>new to RideRev? <a href="sign-up.html">join now</a></p>
+      <p
+        class="text-center hover:tracking-wide transition-all ease-in-out duration-200"
+      >
+        new to RideRev?
+        <a href="sign-up.html" class="text-blue-900">join now</a>
+      </p>
     </div>
   </body>
 </html>
