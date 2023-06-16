@@ -1,6 +1,5 @@
 "use strict";
 import "./style.scss";
-
 //vars and const
 const logo = document.querySelector(".logo");
 const itemsList = document.querySelectorAll("li");
@@ -42,7 +41,7 @@ const userLoggedInState = () => {
     const profileBtn = document.getElementById("profile");
     profileBtn.addEventListener("click", () => {
       console.log("gg");
-      window.location.href = "./pages/userProfile.html";
+      window.location.href = "./pages/users/userProfile.html";
     });
   } else {
     userState.innerHTML =
@@ -52,10 +51,10 @@ const userLoggedInState = () => {
     const signUpBtn = document.getElementById("signUp");
     signUpBtn.addEventListener("click", () => {
       console.log("gg");
-      window.location.href = "./src/pages/sign-up.html";
+      window.location.href = "./src/pages/sign-up/sign-up.php";
     });
     signInBtn.addEventListener("click", () => {
-      window.location.href = "./src/pages/sign-in.html";
+      window.location.href = "./src/pages/sign-in/sign-in.php";
       console.log("gg");
     });
   }
@@ -79,12 +78,6 @@ carouselBtns.forEach((carouselBtn) => {
     }
   });
 });
-// Initialize ScrollSnap
-const scrollSnapContainer = new ScrollSnap(productContainer, {
-  snapDestinationX: "100%",
-  snapIntervalX: "100%",
-});
-scrollSnapContainer.bind();
 //footer
 footer.textContent = `Copyright © ${new Date().getFullYear()} RideRiv. All rights reserved.`;
 //exports

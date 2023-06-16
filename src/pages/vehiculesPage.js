@@ -1,1 +1,0 @@
-import "./pagesStyle.scss";

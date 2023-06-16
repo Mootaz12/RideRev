@@ -1,8 +1,8 @@
-import "./pagesStyle.scss";
+import "../css/pagesStyle.scss";
 ("use strcit");
 // vars and const
 const form = document.getElementById("form");
-const emailPhoneInput = document.getElementById("email-phone-input");
+const emailPhoneInput = document.getElementById("phone");
 const passInput = document.getElementById("pass-input");
 const showPassBtn = document.getElementById("show-pass-btn");
 // functions

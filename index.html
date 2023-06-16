@@ -10,7 +10,7 @@
     <script type="module" src="/main.js" defer></script>
     <title>RideRev</title>
   </head>
-  <body>
+  <body class="text-[14px] laptop:text-[16px]">
     <div id="app" class="font-roboto">
       <header class="w-full bg-darkBlue text-white py-3">
         <nav class="flex laptop:justify-around justify-evenly items-center">
@@ -20,12 +20,11 @@
           <ul class="laptop:flex laptop:justify-evenly gap-5 hidden">
             <li class="active"><a href="#home">Home</a></li>
             <li>
-              <a href=".src//pages/vehiculesPage.html" id="vehicules"
+              <a href=".src/pages/vehicules/vehiculesPage.html" id="vehicules"
                 >Our Vehicules</a
               >
             </li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#help">help</a></li>
           </ul>
           <div class="buttons flex text-black gap-4">
             <div
@@ -44,8 +43,10 @@
         </nav>
       </header>
       <main>
-        <section id="home" class="hero pl-24 py-16 relative">
-          <h1 class="text-black font-poppins text-7xl max-w-[800px] mb-7 mt-10">
+        <section id="home" class="hero laptop:pl-24 pl-5 py-16 relative">
+          <h1
+            class="text-black font-poppins laptop:text-7xl text-5xl text-center max-w-[800px] mb-7 mt-10"
+          >
             Unleash the Explorer Within
           </h1>
           <p class="text-white/80 max-w-[300px] text-sm mb-10">
@@ -84,7 +85,9 @@
               <h3 class="font-bold text-darkBlue text-2xl font-poppins">
                 Why Us?
               </h3>
-              <p class="max-w-[600px] text-black/80 leading-7 mx-20">
+              <p
+                class="laptop:max-w-[600px] text-black/80 leading-7 laptop:mx-20"
+              >
                 Choose Us for Convenient Scooter Allocation. At RideRev, we
                 pride ourselves on providing a hassle-free experience for
                 scooter allocation With just three simple steps, you can be on
@@ -92,7 +95,7 @@
               </p>
               <button
                 type="button"
-                class="bg-lightblue text-darkBlue rounded-md text-lg font-medium px-4 py-2"
+                class="bg-lightblue text-darkBlue rounded-md laptop:text-lg text-md font-medium px-4 py-2"
               >
                 Know more
               </button>
@@ -100,13 +103,13 @@
             <img
               src="./images/whyUs-img.png"
               alt="bike image"
-              class="laptop:w-[600px] aspect-[16/9] z-10 laptop:absolute laptop:bottom-5 laptop:-left-5"
+              class="laptop:w-[600px] hidden laptop:block aspect-[16/9] z-10 laptop:absolute laptop:bottom-5 laptop:-left-5"
             />
             <div class="w-2/6 laptop:block hidden"></div>
           </div>
           <div
             id="product-container"
-            class="mx-10 flex flex-col laptop:flex-row border border-black px-10 py-6 snap-x snap-proximity"
+            class="hidden laptop:grid mx-10 grid-flow-col auto-cols-[21%] overflow-x-auto overscroll-x-contain gap-10 border border-black p-10"
           >
             <!-- change it to be dynamic -->
             <div class="product snap-center">
@@ -135,31 +138,23 @@
             </div>
           </div>
         </section>
-        <section id="about" class="p-10">
+
+        <section id="help" class="p-10 bg-lightblue rounded-3xl relative">
           <h2
             class="text-darkBlue font-poppins font-semibold tracking-wide text-3xl"
           >
-            About RideRev
-          </h2>
-          <p class="max-w-[600px] text-black/80 leading-7 my-10 mx-20">
-            At RideRev, we are dedicated to providing convenient and reliable
-            mobility solutions. With a focus on seamless experiences, we
-            streamline the process from booking to pick-up and return. Our
-            partnership with reputable rental companies ensures safety and
-            reliability, backed by comprehensive insurances and coverages. We
-            prioritize transparency, excellent customer service, and value your
-            feedback. Join our community of satisfied customers and discover the
-            convenience and flexibility of RideRev. Start your journey with us
-            today!
-          </p>
-        </section>
-        <section id="contact" class="p-10 bg-lightblue rounded-3xl relative">
-          <h2
-            class="text-darkBlue font-poppins font-semibold tracking-wide text-3xl"
-          >
-            Contact
+            Need Help ?
           </h2>
           <div class="laptop:flex-row gap-20 flex flex-col ml-20 mt-20">
+            <p
+              class="max-w-[400px] text-black/80 leading-7 order-first laptop:order-last"
+            >
+              Our customer support team is available to assist you anytime. If
+              you have any inquiries, feedback, or require assistance with our
+              services, please don't hesitate to reach out. We value your input
+              and strive to provide prompt and helpful support to ensure your
+              satisfaction.
+            </p>
             <form action="POST" class="flex flex-col gap-5">
               <label for="name">name</label>
               <input type="text" name="name" placeholder="name" required />
@@ -177,20 +172,21 @@
                 placeholder="xyz@gmail.com"
                 required
               />
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="5"
+                placeholder="don't hesitate to ask any questions 🙂 "
+                class="outline-0 rounded-md px-5 py-3"
+              ></textarea>
               <button
                 type="submit"
-                class="self-end px-5 py-3 bg-grey rounded-md -xl text-center text-black"
+                class="self-end px-5 py-3 bg-grey rounded-md text-xl text-center text-black"
               >
                 Submit
               </button>
             </form>
-            <p class="max-w-[400px] text-black/80 leading-7">
-              Our customer support team is available to assist you anytime. If
-              you have any inquiries, feedback, or require assistance with our
-              services, please don't hesitate to reach out. We value your input
-              and strive to provide prompt and helpful support to ensure your
-              satisfaction.
-            </p>
           </div>
         </section>
       </main>

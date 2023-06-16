@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="sign-in.js" defer></script>
+    <script type="module" src="./sign-in.js" defer></script>
     <title>RideRev</title>
   </head>
   <body class="grid place-items-center h-[100vh]">
     <div class="flex flex-col gap-7 font-roboto p-6 rounded-md shadow-lg">
       <h2 class="font-bold text-2xl font-poppins tracking-wide">Sign in</h2>
-      <form action="POST" id="form" class="flex flex-col gap-2">
-        <label for="email" class="hidden">name</label>
+      <form method="POST" action="./signin.php" id="form" class="flex flex-col gap-2">
+        <label for="phone" class="hidden">phone</label>
         <input
-          name="email"
-          id="email-phone-input"
+          name="phone"
+          id="phone"
           type="text"
           class="p-4 outline-0 border-1 border-gray-400 rounded-sm text-zinc-700 font-medium text-lg"
           placeholder="Phone or Email"
@@ -37,6 +37,12 @@
           >
             show
           </button>
+          <?php
+            session_start();
+            if(isset($_SESSION["errMsg"])){
+              echo "<p id='errMsg' class='text-sm text-red-600 px-2'>" . $_SESSION["errMsg"] . "</p>";
+            }
+          ?>
         </div>
         <a class="text-blue-900">Forgot password?</a>
         <button
@@ -50,7 +56,7 @@
         class="text-center hover:tracking-wide transition-all ease-in-out duration-200"
       >
         new to RideRev?
-        <a href="sign-up.html" class="text-blue-900">join now</a>
+        <a href="../sign-up/sign-up.php" class="text-blue-900">join now</a>
       </p>
     </div>
   </body>
